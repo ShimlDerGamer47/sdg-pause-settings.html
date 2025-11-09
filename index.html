@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pausen Einstellungen</title>
+    <link
+      rel="icon"
+      type="img/png"
+      href="IMG Ordner/Website Icon Ordner/Pause.png"
+    />
+    <link rel="stylesheet" href="pausen-settings.css" />
+    <script defer src="pausen-settings.js"></script>
+  </head>
+  <body>
+    <div id="backgroundImgContainerId" class="background-img-container">
+      <img
+        width="1920"
+        height="1080"
+        id="backgroundImgId"
+        src="IMG Ordner/Background IMG Ordner/Background-IMG.gif"
+        alt="Hintergrund Gif"
+        class="background-img"
+        loading="lazy"
+      />
+    </div>
+    <div class="canvas-url-container">
+      <canvas width="800" height="600" class="canvas-url"></canvas>
+    </div>
+    <div class="url-copy-container">
+      <div class="url-text-preview-container">
+        <h1 id="urlTextPreviewId" class="url-text-preview"></h1>
+      </div>
+      <div class="copy-btn-container">
+        <input
+          type="button"
+          id="copyBtnId"
+          value="Kopieren"
+          title="Kopieren"
+          class="copy-btn"
+        />
+      </div>
+    </div>
+    <div class="info-txt-container">
+      <p class="info-txt">
+        Schreib deinen geliebten Pausen Text rein.<br />
+        Entscheide welchen Blur es haben muss es geht von 0px - 10px.<br />
+        Genau so wie die Schriftgröße von 0px - 120px<br />
+        Besuche auch die Verlinkte Website & suche dort notfalls nach font-size
+        (Schriftgröße).<br />
+        Dort wird alles drinnen stehen.<br />
+        <br />
+        Die Url muss so aus sehen wie im Info Text.<br />
+        <br />
+        <i class="kursiv">
+          <b>
+            https://shimldergamer47.github.io/sdg-pause.html/<br />
+            ?text= -' Hier kommt dein Text rein '-<br />
+            &blur= -' Hier kommt die blur als Zahl rein '- px<br />
+            &fontSize= -' Hier kommt die Schriftgröße als Zahl '- px
+          </b>
+        </i>
+      </p>
+    </div>
+    <div class="main-url-input-container">
+      <div class="input-text-url-container">
+        <input
+          type="text"
+          id="inputTextUrlId"
+          value=""
+          title="Url bearbeiten nach Wunsch"
+          class="input-text-url"
+          placeholder="Url bearbeiten nach Wunsch"
+        />
+        <label for="inputTextUrlId" class="label-placeholder">
+          Url bearbeiten nach Wunsch
+        </label>
+      </div>
+      <div class="input-btn-send-container">
+        <input
+          type="button"
+          id="inputBtnSendId"
+          value="Absenden"
+          title="Absenden"
+          class="input-btn-send"
+        />
+      </div>
+    </div>
+    <div
+      id="urlMyCssWebsiteContainerId"
+      class="url-link-my-css-website-container"
+    >
+      <a
+        href="https://shimldergamer47.github.io/einfaches-css-befehle.html/"
+        id="urlMyCssWebsiteId"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="url-link-my-css-website"
+      >
+        Einfache CSS Befehle
+      </a>
+    </div>
+    <div class="btn-delete-container">
+      <input
+        type="button"
+        id="btnDeleteId"
+        value="Löschen"
+        title="Löschen"
+        class="btn-delete"
+      />
+    </div>
+    <div id="mainDateContainerId" class="main-container">
+      <div id="titleTimeContainerId" class="title-time-container">
+        <h1 id="titleTimeId" class="title-time"></h1>
+        <h1 id="titleClockId" class="title-clock"></h1>
+      </div>
+      <div id="titleDateContainerId" class="title-date-container">
+        <h2 id="titleDateId" class="title-date"></h2>
+      </div>
+    </div>
+  </body>
+</html>
