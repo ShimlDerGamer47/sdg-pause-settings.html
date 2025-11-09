@@ -4,6 +4,11 @@
   --border-var: 1px solid var(--border-color-var);
   --padding-block-inline-var: 5px 5px;
   --margin-top-left-bottom-right-var: 5px 5px 5px 5px;
+  --animation-transition-time: 3s;
+  --animation: slide-in var(--animation-transition-time)
+    cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+  --transition: animation var(--animation-transition-time)
+    cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 @font-face {
@@ -30,6 +35,20 @@ body {
   height: 100vh;
   overflow: hidden hidden;
   margin: 0;
+  animation: var(--animation);
+  transition: var(--transition);
+}
+
+@keyframes slide-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 body::-webkit-scrollbar {
@@ -117,7 +136,7 @@ body::selection {
 }
 
 .canvas-url {
-  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0);
   width: 800px;
   height: 600px;
   object-fit: cover;
