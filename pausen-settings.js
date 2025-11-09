@@ -5,9 +5,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const robotoBold = getComputedStyle(html)
     .getPropertyValue(fontFamilyVar)
     .trim();
+
+  const rootAnimationVar = "--animation";
+  const cssAnimation = getComputedStyle(html)
+    .getPropertyValue(rootAnimationVar)
+    .trim();
+
+  const rootTransitionVar = "--transition";
+  const cssTransition = getComputedStyle(html)
+    .getPropertyValue(rootTransitionVar)
+    .trim();
   const body = document.body;
 
   if (robotoBold) body.style.fontFamily = robotoBold;
+
+  if (cssAnimation) body.style.animation = `${cssAnimation}`;
+  if (cssTransition) body.style.transition = `${cssTransition}`;
 
   const mobileQuarry = window.matchMedia("(max-width: 768px)");
 
